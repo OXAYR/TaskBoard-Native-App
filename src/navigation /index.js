@@ -4,13 +4,11 @@ import Login from '../screens/AuthFlow/LoginScreen';
 import {useSelector} from 'react-redux';
 import TabNavigation from './TabNavigation';
 import Home from '../screens/HomeScreen';
-// import { useSelector } from 'react-redux';
 
 const StackNavigation = () => {
   const token = useSelector(state => state?.user?.tokken);
   console.log('Stack Token', token);
   return token ? <MainStack /> : <AuthStack />;
-  // return <AuthStack />;
 };
 export default StackNavigation;
 
